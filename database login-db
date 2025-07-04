@@ -1,0 +1,48 @@
+CREATE DATABASE login_db;
+
+USE login_db;
+
+CREATE TABLE login (
+    username VARCHAR(40),
+    password VARCHAR(40)
+);
+
+CREATE TABLE car (
+    carname VARCHAR(50),
+    model VARCHAR(50),
+    caryear INT,
+    price DOUBLE,
+    colour VARCHAR(30),
+    bookid INT
+);
+
+CREATE TABLE Staff (
+    staffid INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    position VARCHAR(50),
+    contact VARCHAR(15),
+    address TEXT
+);
+
+CREATE TABLE payment_record (
+    customer_name VARCHAR(50),
+    payment_date DATE,
+    amount DOUBLE
+);
+
+CREATE TABLE sales_record (
+    carname VARCHAR(50),
+    customer_name VARCHAR(50),
+    price DOUBLE,
+    sale_date DATE
+);
+
+
+How to Run
+    Compile the program: 
+            javac -cp ".;mysql-connector-java-8.0.33.jar" Mainclass.java
+
+    Run the program:
+         java -cp ".;mysql-connector-java-8.0.33.jar" Mainclass
+
